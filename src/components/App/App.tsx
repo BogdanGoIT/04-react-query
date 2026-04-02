@@ -27,8 +27,6 @@ function App() {
   const [movie, setMovie] = useState<Movie | null>(null);
   const [page, setPage] = useState(1);
 
-  console.log(movie);
-
   const { data, isLoading, isError, isSuccess } = useQuery({
     queryKey: ["movies", search, page],
     queryFn: () => fetchMovies(search, page),
