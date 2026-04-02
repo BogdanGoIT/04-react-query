@@ -3,7 +3,7 @@ import type { Movie } from "../types/movie";
 
 export interface GetMovieRes {
   results: Movie[];
-  total_page: number;
+  total_pages: number;
 }
 
 const movieKey = import.meta.env.VITE_TMDB_TOKEN;
