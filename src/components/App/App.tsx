@@ -36,8 +36,6 @@ function App() {
     placeholderData: keepPreviousData,
   });
 
-  console.log(data);
-
   const totalPages = data?.total_pages ?? 0;
 
   const closeModal = () => {
@@ -52,9 +50,8 @@ function App() {
   useEffect(() => {
     if (isSuccess && !data.results.length) {
       toast.error("No movies found for your request.");
-      return;
     }
-  }, [data, isSuccess, search]);
+  }, [data, isSuccess]);
 
   return (
     <>
